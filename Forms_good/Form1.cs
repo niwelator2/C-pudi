@@ -7,7 +7,7 @@ namespace Forms_good
             InitializeComponent();
             this.Text = "My firsy application";
             this.Width = 800;
-            this.Height = 200;
+            this.Height = 600;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -16,6 +16,7 @@ namespace Forms_good
             // Button 
             Button firstButton = new Button();
             firstButton.Location = new Point(20, 19);
+            firstButton.Size = new Size(554, 320);
 
             firstButton.Text = "Clic me";
             Controls.Add(firstButton);
