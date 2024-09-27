@@ -19,7 +19,8 @@ namespace Forms_good
             firstButton.Size = new Size(554, 320);
 
             firstButton.Text = "Clic me";
-            firstButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            firstButton.TextAlign = ContentAlignment.BottomLeft;
+            firstButton.DialogResult = DialogResult.OK; 
             Controls.Add(firstButton);
         }
     }
