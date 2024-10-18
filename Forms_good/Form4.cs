@@ -53,13 +53,15 @@ namespace Forms_good
 
 
 
-            Button button1 = new Button();
+            /*Button button1 = new Button();
             button1.Location = new Point(250, 50);
             button1.Size = new Size(300, 35);
             button1.Text = 'fractional';
             button1.DialogResult = DialogResult.OK;
             button1.Click += new EventHandler(button1_Click);
-            Controls.Add(button1)
+            Controls.Add(button1);
+            */
         }
+        
     }
 }
