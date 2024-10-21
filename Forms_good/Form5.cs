@@ -77,18 +77,31 @@ namespace Forms_good
 
         private void firstButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (((ListView)Controls["listView1"]).SelectedItems[0].SubItems[1].Text != null)
+                try
                 {
-                    string SelectedListView = ((ListView)Controls["listView1"]).SelectedItems[0].SubItems[1].Text;
-                    MessageBox.Show(SelectedListView, "Selected", MessageBoxButtons.OK);
+                    StringBuilder checkedSurnames = new StringBuilder();
+
+                    foreach (ListViewItem item in ((ListView)Controls["listView1"]).Items)
+                    {
+                        if (item.Checked) 
+                        {
+                            checkedSurnames.AppendLine(item.SubItems[1].Text);
+                        }
+                    }
+
+                    if (checkedSurnames.Length > 0)
+                    {
+                        MessageBox.Show(checkedSurnames.ToString(), "Checked Surnames", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No items checked!", "Error", MessageBoxButtons.OK);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+                }
         }
     }
 }
