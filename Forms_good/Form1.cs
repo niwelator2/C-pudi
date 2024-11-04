@@ -2,59 +2,14 @@ namespace Forms_good
 {
     public partial class Form1 : Form
     {
-        /*public Form1()
-        {
-            InitializeComponent();
-            Form form1 = new Form();
-            form1.Text = "My dialog box";
-            form1.Width = 600;
-            form1.Height = 800;
+        private TextBox userInput;
 
-            Button button1 = new Button();
-            Button button2 = new Button();
-
-            button1.Text = "OK";
-            button1.Location = new Point(15, 15);
-            button1.Size = new Size(200, 100);
-
-            button2.Text = "Cancel";
-            button2.Location = new Point(button1.Left, button1.Height + button1.Top + 50);
-            button2.Size = new Size(200, 100);
-
-            button1.DialogResult = DialogResult.OK;
-            button2.DialogResult = DialogResult.Cancel;
-
-            form1.FormBorderStyle = FormBorderStyle.FixedDialog;
-            form1.AcceptButton = button1;
-            form1.CancelButton = button2;
-            form1.StartPosition = FormStartPosition.CenterScreen;
-
-            form1.Controls.Add(button1);
-            form1.Controls.Add(button2);
-            form1.ShowDialog();
-
-            if (form1.DialogResult == DialogResult.OK)
-            {
-                MessageBox.Show("The OK button was clicked");
-            }
-            else
-            {
-                MessageBox.Show("The Cancel button was clicked");
-            }
-            InitializeComponent();
-            Application.ApplicationExit += new EventHandler(onExit);
-        }
-        private void onExit(object sender, EventArgs e)
-        {
-            MessageBox.Show("Aplikacja zostanie zamkniêta!");
-        }*/
         public Form1()
         {
             InitializeComponent();
-
-            this.Text = "InputForm";
-            this.Width = 347;
-            this.Height = 323;
+            this.Text = "My first application";
+            this.Width = 800;
+            this.Height = 600;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -71,14 +26,38 @@ namespace Forms_good
 
             Button firstButton = new Button();
 
-            firstButton.Location = new Point(12, 222);
+            firstButton.Location = new Point(20, 80);
+            firstButton.Size = new Size(150, 30);
+            firstButton.Text = "Click me";
+            firstButton.TextAlign = ContentAlignment.MiddleCenter;
+            firstButton.Click += new EventHandler(CheckInput);
 
-            firstButton.Text = "Click me!";
-            firstButton.Height = 35;
-            firstButton.Width = 300;
-
-            firstButton.Click += new EventHandler(firstButton_Click);
             Controls.Add(firstButton);
+
+            // Input TextBox
+            userInput = new TextBox();
+            userInput.Location = new Point(20, 40);
+            userInput.Width = 190;
+            Controls.Add(userInput);
+
+            // Label
+            Label firstLabel = new Label();
+            firstLabel.Location = new Point(20, 14);
+            firstLabel.Text = "Enter text:";
+            firstLabel.Width = 100;
+            Controls.Add(firstLabel);
+        }
+
+        private void CheckInput(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(userInput.Text))
+            {
+                MessageBox.Show("Pusto" + MessageBoxButtons.OK+ MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("You entered: " + userInput.Text, "Input Received", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void firstButton_Click(object sender, EventArgs e)
         {
