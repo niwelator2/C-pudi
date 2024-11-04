@@ -13,15 +13,25 @@ namespace Forms_good
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
 
-            // Button 
+            TextBox firstInput = new TextBox();
+            firstInput.Name = "inputBoxInForm";
+            firstInput.Location = new Point(12, 12);
+
+            firstInput.Width = 300;
+            firstInput.Height = 200;
+            firstInput.Multiline = true;
+            Controls.Add(firstInput);
+
             Button firstButton = new Button();
+
             firstButton.Location = new Point(20, 80);
             firstButton.Size = new Size(150, 30);
             firstButton.Text = "Click me";
             firstButton.TextAlign = ContentAlignment.MiddleCenter;
             firstButton.Click += new EventHandler(CheckInput);
+
             Controls.Add(firstButton);
 
             // Input TextBox
@@ -49,5 +59,18 @@ namespace Forms_good
                 MessageBox.Show("You entered: " + userInput.Text, "Input Received", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void firstButton_Click(object sender, EventArgs e)
+        {
+            string ValueOfField = ((TextBox)Controls["inputBoxInForm"]).Text;
+            if (ValueOfField == "")
+            {
+                MessageBox.Show("Field empty!", "Alert!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show(ValueOfField, " Alert!", MessageBoxButtons.OK);
+            }
+        }
     }
+}
 }
