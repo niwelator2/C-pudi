@@ -11,7 +11,8 @@ namespace Forms_good
             // Application.Run(new Form5());
             // Application.Run(new ComboBox());
             // Application.Run(new DateRangePickerForm());
-            Application.Run(new Numeric());
+            // Application.Run(new Numeric());
+            Application.Run(new RadioButtonForm());
         }
     }
 }
