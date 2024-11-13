@@ -12,4 +12,13 @@
     <Folder Include="Image\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="men.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="women.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
