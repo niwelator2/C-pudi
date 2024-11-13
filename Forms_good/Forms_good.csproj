@@ -9,11 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Image\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="men.png">
+    <None Update="men.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="women.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="women.png">

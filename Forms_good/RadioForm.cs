@@ -55,7 +55,6 @@ namespace Forms_good
 
             // Add first group box to the form
             Controls.Add(firstGroupBox);
-
             // GroupBox 2: Nationality selection
             GroupBox secondGroupBox = new GroupBox();
             secondGroupBox.Location = new Point(50, 180);
@@ -103,36 +102,63 @@ namespace Forms_good
             genderGroupBox.Location = new Point(320, 12);
             genderGroupBox.Name = "genderGroupBox";
             genderGroupBox.Text = "Select Gender with Image";
-            genderGroupBox.Width = 250;
-            genderGroupBox.Height = 160;
+            genderGroupBox.Width = 450;
+            genderGroupBox.Height = 300;
             genderGroupBox.Padding = new Padding(10);
+            Controls.Add(genderGroupBox);
+
+            // Panel for "Men" section
+            Panel menPanel = new Panel();
+            menPanel.Location = new Point(20, 30);
+            menPanel.Size = new Size(200, 240);
+            menPanel.BorderStyle = BorderStyle.FixedSingle;
+            genderGroupBox.Controls.Add(menPanel);
+
+            // PictureBox for Men image
+            PictureBox menPictureBox = new PictureBox();
+            menPictureBox.Name = "menPictureBox";
+            menPictureBox.Location = new Point(10, 10);
+            menPictureBox.Size = new Size(180, 180);
+            menPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            menPanel.Controls.Add(menPictureBox);
 
             // RadioButton for Men
             RadioButton manRadioButton = new RadioButton();
-            manRadioButton.Location = new Point(20, 30);
+            manRadioButton.Location = new Point(50, 200);
             manRadioButton.Name = "manRadioButton";
             manRadioButton.Text = "Men";
-            manRadioButton.Width = 200;
-            manRadioButton.Height = 40;
-            manRadioButton.TextAlign = ContentAlignment.MiddleRight;
-            manRadioButton.Click += new EventHandler(imageButto1_Click);
-            genderGroupBox.Controls.Add(manRadioButton);
+            manRadioButton.Width = 100;
+            manRadioButton.Height = 30;
+            manRadioButton.TextAlign = ContentAlignment.MiddleCenter;
+            manRadioButton.Click += (sender, e) => LoadImage("men.jpg", menPictureBox);
+            menPanel.Controls.Add(manRadioButton);
+
+            // Panel for "Women" section
+            Panel womenPanel = new Panel();
+            womenPanel.Location = new Point(230, 30);
+            womenPanel.Size = new Size(200, 240);
+            womenPanel.BorderStyle = BorderStyle.FixedSingle;
+            genderGroupBox.Controls.Add(womenPanel);
+
+            // PictureBox for Women image
+            PictureBox womenPictureBox = new PictureBox();
+            womenPictureBox.Name = "womenPictureBox";
+            womenPictureBox.Location = new Point(10, 10);
+            womenPictureBox.Size = new Size(180, 180);
+            womenPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            womenPanel.Controls.Add(womenPictureBox);
 
             // RadioButton for Women
             RadioButton womanRadioButton = new RadioButton();
-            womanRadioButton.Location = new Point(20, 70);
+            womanRadioButton.Location = new Point(50, 200);
             womanRadioButton.Name = "womanRadioButton";
             womanRadioButton.Text = "Women";
-            womanRadioButton.Width = 200;
-            womanRadioButton.Height = 40;
-            womanRadioButton.TextAlign = ContentAlignment.MiddleRight;
-            womanRadioButton.Click += new EventHandler(imageButto2_Click);
-            genderGroupBox.Controls.Add(womanRadioButton);
-
-            // Add gender group box to the form
-            Controls.Add(genderGroupBox);
+            womanRadioButton.Width = 100;
+            womanRadioButton.Height = 30;
+            womanRadioButton.TextAlign = ContentAlignment.MiddleCenter;
+            womanRadioButton.Click += (sender, e) => LoadImage("women.png", womenPictureBox);
+            womenPanel.Controls.Add(womanRadioButton);
         }
-
         private void radioButton1_Click(object sender, EventArgs e)
         {
             RadioButton radioButton = (RadioButton)sender;
@@ -164,7 +190,7 @@ namespace Forms_good
                 MessageBox.Show("to nie jest radioButton");
                 return;
             }
-            MessageBox.Show("smierc czarnym");
+            MessageBox.Show("black");
             radioButton.Text = "pierogi";
         }
         private void americanRadioButton2(object sender, EventArgs e)
@@ -189,45 +215,23 @@ namespace Forms_good
             MessageBox.Show("bagieta");
             radioButton.Text = "bagieta";
         }
-        private void imageButto1_Click(object sender, EventArgs e)
+        private void LoadImage(string filePath, PictureBox pictureBox)
         {
             try
             {
-                if (File.Exists("men.png"))
+                if (File.Exists(filePath))
                 {
-                    Image ImageToShow = new Bitmap("men.png");
-                    ((PictureBox)Controls["pictureBox1"]).Image = (Image)ImageToShow;
+                    pictureBox.Image = new Bitmap(filePath);
                 }
                 else
                 {
-                    MessageBox.Show("Plik nie istnieje", "Error", MessageBoxButtons.OK);
+                    MessageBox.Show("Image file does not exist: " + filePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK);
+                MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void imageButto2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists("women.png"))
-                {
-                    Image ImageToShow = new Bitmap("women.png");
-                    ((PictureBox)Controls["pictureBox1"]).Image = (Image)ImageToShow;
-                }
-                else
-                {
-                    MessageBox.Show("Plik nie istnieje", "Error", MessageBoxButtons.OK);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK);
-            }
-        }
-
-
     }
 }
