@@ -15,7 +15,8 @@ namespace Forms_good
             // Application.Run(new RadioButtonForm());
             // Application.Run(new RadioForm());
             // Application.Run(new szablony());
-             Application.Run(new cw3());
+            // Application.Run(new cw3());
+             Application.Run(new Form7());
         }
     }
 }
