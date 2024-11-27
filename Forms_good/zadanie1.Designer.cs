@@ -93,7 +93,6 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Wielkość liter w imienu";
-
             // 
             // radioButton2
             // 
@@ -117,7 +116,6 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Małe";
             radioButton1.UseVisualStyleBackColor = true;
-
             // 
             // groupBox2
             // 
@@ -130,7 +128,6 @@
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Wielkości liter w nazwisku";
-
             // 
             // radioButton5
             // 
@@ -142,7 +139,6 @@
             radioButton5.TabStop = true;
             radioButton5.Text = "Wielkość dowolna";
             radioButton5.UseVisualStyleBackColor = true;
-
             // 
             // radioButton4
             // 
@@ -180,7 +176,6 @@
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             groupBox3.Text = "Dodatkowe opcje";
-
             // 
             // checkBox4
             // 
@@ -191,6 +186,7 @@
             checkBox4.TabIndex = 7;
             checkBox4.Text = "Nazwisko: Blokuj wielkość liter";
             checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
             // 
             // checkBox3
             // 
@@ -201,6 +197,7 @@
             checkBox3.TabIndex = 2;
             checkBox3.Text = "Imię: Blokuj wielkośc liter";
             checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // checkBox2
             // 
@@ -211,6 +208,7 @@
             checkBox2.TabIndex = 1;
             checkBox2.Text = "Nazwisko: Blokuj edycję";
             checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // checkBox1
             // 
@@ -221,7 +219,7 @@
             checkBox1.TabIndex = 0;
             checkBox1.Text = "Imię: Blokuj edycję";
             checkBox1.UseVisualStyleBackColor = true;
-
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // zadanie1
             // 
