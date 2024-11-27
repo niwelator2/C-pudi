@@ -93,7 +93,7 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Wielkość liter w imienu";
-            groupBox1.Enter += groupBox1_Enter;
+
             // 
             // radioButton2
             // 
@@ -117,6 +117,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Małe";
             radioButton1.UseVisualStyleBackColor = true;
+
             // 
             // groupBox2
             // 
@@ -129,7 +130,7 @@
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Wielkości liter w nazwisku";
-            groupBox2.Enter += groupBox2_Enter;
+
             // 
             // radioButton5
             // 
@@ -141,7 +142,7 @@
             radioButton5.TabStop = true;
             radioButton5.Text = "Wielkość dowolna";
             radioButton5.UseVisualStyleBackColor = true;
-            radioButton5.CheckedChanged += radioButton5_CheckedChanged;
+
             // 
             // radioButton4
             // 
@@ -179,7 +180,7 @@
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             groupBox3.Text = "Dodatkowe opcje";
-            groupBox3.Enter += groupBox3_Enter_1;
+
             // 
             // checkBox4
             // 
@@ -220,7 +221,7 @@
             checkBox1.TabIndex = 0;
             checkBox1.Text = "Imię: Blokuj edycję";
             checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+
             // 
             // zadanie1
             // 
