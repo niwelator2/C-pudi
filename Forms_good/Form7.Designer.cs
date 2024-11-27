@@ -33,7 +33,6 @@
             button2 = new Button();
             button3 = new Button();
             comboBox1 = new System.Windows.Forms.ComboBox();
-            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -86,26 +85,18 @@
             comboBox1.TabIndex = 4;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(350, 168);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(167, 23);
-            textBox2.TabIndex = 5;
-            // 
             // Form7
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
             Controls.Add(comboBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Name = "Form7";
-            Text = "Form7";
+            Text = "  ";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,6 +108,5 @@
         private Button button2;
         private Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private TextBox textBox2;
     }
 }
