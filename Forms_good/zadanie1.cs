@@ -21,6 +21,14 @@ namespace Forms_good
             InitializeComponent();
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Ensure this radio button is selected and update textBox1 (Imię) accordingly
+            if (radioButton1.Checked && !string.IsNullOrEmpty(textBox1.Text))
+            {
+                textBox1.Text = textBox1.Text.ToLower(); // Convert text to lowercase
+            }
+        }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -63,17 +71,17 @@ namespace Forms_good
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && !string.IsNullOrEmpty(textBox2.Text))
+            if (radioButton3.Checked && !string.IsNullOrEmpty(textBox2.Text))
             {
-                textBox2.Text = textBox2.Text.ToLower();
+                textBox2.Text = textBox2.Text.ToLower(); // Convert text to lowercase
             }
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked && !string.IsNullOrEmpty(textBox2.Text))
+            if (radioButton4.Checked && !string.IsNullOrEmpty(textBox2.Text))
             {
-                textBox2.Text = textBox2.Text.ToUpper();
+                textBox2.Text = textBox2.Text.ToUpper(); // Convert text to uppercase
             }
         }
 
