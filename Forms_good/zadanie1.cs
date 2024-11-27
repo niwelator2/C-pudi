@@ -33,26 +33,12 @@ namespace Forms_good
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Update the "imie" field with the text from textBox1
             imie = textBox1.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // Update the naz field whenever the text in textBox2 changes
             naz = textBox2.Text;
-
-            // Apply transformation based on selected radio button
-            if (radioButton1.Checked)
-            {
-                textBox2.Text = naz.ToLower();
-                textBox2.SelectionStart = textBox2.Text.Length;
-            }
-            else if (radioButton2.Checked)
-            {
-                textBox2.Text = naz.ToUpper();
-                textBox2.SelectionStart = textBox2.Text.Length;
-            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
