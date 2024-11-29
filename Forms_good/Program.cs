@@ -18,7 +18,7 @@ namespace Forms_good
             // Application.Run(new cw3());
             // Application.Run(new Form7());
             // Application.Run(new zadanie1());
-             Application.Run(new oknodialogowe());
+             Application.Run(new okno_dialogowe());
 
         }
     }
