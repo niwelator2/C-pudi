@@ -18,8 +18,12 @@ namespace Forms_good
             // Application.Run(new cw3());
             // Application.Run(new Form7());
             // Application.Run(new zadanie1());
-             Application.Run(new okno_dialogowe());
-
+            // Application.Run(new okno_dialogowe());
+            // Application.Run(new panele());
+            // Application.Run(new Menu());
+            // Application.Run(new imagelist());
+            // Application.Run(new pliki());
+             Application.Run(new egzamin_2024_styczen());
         }
     }
 }
