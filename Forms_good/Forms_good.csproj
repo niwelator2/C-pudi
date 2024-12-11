@@ -24,31 +24,40 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="men.jpg">
+    <None Update="Properties\Image\men.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Properties\000-odcisk.jpg">
+    <None Update="Properties\Image\000-odcisk.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Properties\000-zdjecie.jpg">
+    <None Update="Properties\Image\000-zdjecie.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Properties\111-odcisk.jpg">
+    <None Update="Properties\Image\111-odcisk.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Properties\111-zdjecie.jpg">
+    <None Update="Properties\Image\111-zdjecie.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Properties\333-odcisk.jpg">
+    <None Update="Properties\Image\333-odcisk.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Properties\333-zdjecie.jpg">
+    <None Update="Properties\Image\333-zdjecie.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Image\list.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Image\paczka.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Image\pocztowka.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="women.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="women.png">
+    <None Update="Properties\Image\women.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

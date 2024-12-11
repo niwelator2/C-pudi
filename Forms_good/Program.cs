@@ -23,7 +23,9 @@ namespace Forms_good
             // Application.Run(new Menu());
             // Application.Run(new imagelist());
             // Application.Run(new pliki());
-             Application.Run(new egzamin_2024_styczen());
+            // Application.Run(new egzamin_2024_styczen());
+             Application.Run(new egzamin_2023_czerwiec());
+
         }
     }
 }

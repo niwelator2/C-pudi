@@ -45,8 +45,8 @@ namespace Forms_good
             try
             {
                 // Adjust path based on your working directory
-                string imagePath1 = "Properties\\111-zdjecie.jpg";
-                string imagePath2 = "Properties\\111-odcisk.jpg";
+                string imagePath1 = "Properties\\Image\\111-zdjecie.jpg";
+                string imagePath2 = "Properties\\Image\\111-odcisk.jpg";
 
                 pictureBox1.Image = Image.FromFile(imagePath1);
                 pictureBox2.Image = Image.FromFile(imagePath2);
@@ -65,8 +65,8 @@ namespace Forms_good
             try
             {
                 // Adjust path based on your working directory
-                string imagePath1 = "Properties\\333-zdjecie.jpg";
-                string imagePath2 = "Properties\\333-odcisk.jpg";
+                string imagePath1 = "Properties\\Image\\333-zdjecie.jpg";
+                string imagePath2 = "Properties\\Image\\333-odcisk.jpg";
 
                 pictureBox1.Image = Image.FromFile(imagePath1);
                 pictureBox2.Image = Image.FromFile(imagePath2);
