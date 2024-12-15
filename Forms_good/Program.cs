@@ -1,3 +1,5 @@
+using Forms_good.Egzaminy;
+
 namespace Forms_good
 {
     internal static class Program
@@ -24,7 +26,8 @@ namespace Forms_good
             // Application.Run(new imagelist());
             // Application.Run(new pliki());
             // Application.Run(new egzamin_2024_styczen());
-             Application.Run(new egzamin_2023_czerwiec());
+            // Application.Run(new egzamin_2023_czerwiec());
+             Application.Run(new Inf04_2023_01_SG());
 
         }
     }
